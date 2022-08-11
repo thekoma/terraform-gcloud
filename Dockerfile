@@ -6,5 +6,7 @@ RUN \
   apt-add-repository "deb [arch=amd64] https://apt.kubernetes.io kubernetes-xenial main" && \
   apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" && \
   apt update && \
-  apt install -y terraform ansible kubectl && \
-  apt clean all
+  apt install -y terraform python3 kubectl && \
+  apt clean all && \
+  python3 -m pip install --upgrade pip && \
+  python3 -m pip install --upgrade ansible
