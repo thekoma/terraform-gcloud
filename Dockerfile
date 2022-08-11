@@ -8,5 +8,5 @@ RUN \
   apt update && \
   apt install -y terraform python3 kubectl && \
   apt clean all && \
-  python3 -m pip install --upgrade pip && \
-  python3 -m pip install --upgrade ansible
+  python3 -m pip install --upgrade pip --no-cache-dir  && \
+  python3 -m pip install --upgrade ansible  --no-cache-dir
